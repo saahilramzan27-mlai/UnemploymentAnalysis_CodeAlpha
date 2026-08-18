@@ -1,62 +1,63 @@
-# 📊 Unemployment Analysis in India (2019–2020)
+# 📊 Unemployment Analysis in India — Labour Pulse Dashboard
 
-**CodeAlpha Data Science Internship — Task 2: Unemployment Analysis with Python**
+An end-to-end data science pipeline and interactive dashboard analyzing the COVID-19 lockdown's impact on unemployment across 27 Indian states & union territories.
 
-An end-to-end analysis of state-wise unemployment in India, quantifying the impact of the COVID-19
-lockdown on labour markets across Indian states, with interactive and static visualizations plus
-policy-relevant insights.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## 📁 Project Structure
-```
-.
-├── Unemployment_Analysis_India.ipynb   # Main analysis notebook (fully executed)
-├── data/
-│   └── Unemployment_in_India.csv       # Raw dataset
-├── requirements.txt                    # Python dependencies
-└── README.md
-```
+<br>
 
-## 📦 Dataset
-[Unemployment in India — Kaggle](https://www.kaggle.com/datasets/gokulrajkmv/unemployment-in-india)
-Monthly, state-wise estimates of unemployment rate, employed population, and labour participation
-rate for Jan–Oct 2020, covering 27 Indian states/UTs.
-
-## ⚙️ Setup
-
-```bash
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-jupyter lab Unemployment_Analysis_India.ipynb
-```
-
-## 🔍 What's Inside
-
-**Core Analysis**
-1. **Data Cleaning** — column standardization, date parsing, whitespace/duplicate handling, feature engineering
-2. **Exploratory Data Analysis** — distributions, state and zone comparisons, geographic bubble map
-3. **Time-Series Trend Analysis** — national and state-level trends with lockdown annotation, month × state heatmap
-4. **COVID-19 Impact Quantification** — before/after comparison, state-by-state impact ranking
-5. **Correlation Analysis** — unemployment vs. labour force participation
-6. **Key Insights & Policy Recommendations**
-
-**Advanced Analysis**
-7. **Statistical Significance Testing** — Welch's t-test, Mann-Whitney U test, and a bootstrap 95% confidence
-   interval to formally prove the COVID-19 unemployment spike is real, not noise
-8. **Outlier Detection** — IQR-based flagging of extreme state-months
-9. **Predictive Modeling** — Linear Regression & Random Forest with feature-importance analysis
-10. **Forecasting** — Holt linear trend model projecting near-term unemployment
-11. **Choropleth Maps** — true state-boundary geographic visualization, including an animated
-    month-by-month version
-
-## 🚀 How to Reproduce
-1. Download `Unemployment_in_India.csv` from the Kaggle link above (already included in `data/`).
-2. Run all cells top-to-bottom in Jupyter Lab/Notebook.
-
-## 🛠 Tech Stack
-`pandas` · `numpy` · `matplotlib` · `seaborn` · `plotly` · `statsmodels`
+[![Launch Interactive Dashboard](https://img.shields.io/badge/🚀%20LAUNCH%20INTERACTIVE%20DASHBOARD-2d2d2d?style=for-the-badge)](https://pkzq5h.csb.app/)
+[![GitHub Repository](https://img.shields.io/badge/GITHUB%20REPO-181717?style=for-the-badge&logo=github)](https://lnkd.in/eB4PnEpt)
 
 ---
-Built for the **CodeAlpha Data Science Internship**. Remember to also: post your project video on LinkedIn
-tagging @CodeAlpha, upload the repo as `CodeAlpha_UnemploymentAnalysis`, and submit via the internship
-submission form.
+
+### 📌 Project Overview
+
+This repository hosts a data analysis pipeline and interactive web dashboard built to quantify how India's 2020 COVID-19 lockdown reshaped state-level labour markets. It covers data cleaning, exploratory analysis, statistical significance testing ($p < 0.05$), predictive modelling, and a fully interactive React dashboard for exploring state-by-state metrics.
+
+### 📦 Dataset
+
+* **Source:** [Unemployment in India — Kaggle](https://www.kaggle.com/datasets/gokulrajkmv/unemployment-in-india)
+* **Scope:** Monthly, state-wise estimates of unemployment rate, employed population, and labour participation rate for Jan–Oct 2020, covering 27 states/UTs (267 records).
+
+---
+
+### 🔍 Key Findings & Features
+
+* **Statistical Validation:** Hypothesis testing ($t$-test) confirms the COVID-19 spike was statistically significant ($p < 0.05$), with national unemployment increasing by **~3.5 percentage points** overall and peaking at **23.5%** in April 2020.
+* **Core Analysis:**
+  * Data cleaning, column standardization, and feature engineering.
+  * Time-series trend analysis with pre- vs. post-lockdown annotations.
+  * Random Forest regression modeling to evaluate key economic drivers.
+* **Dashboard Features:**
+  * 📈 **National Trend View:** Interactive line chart highlighting the lockdown window.
+  * 🗺️ **State & Zone Explorer:** Dynamic filtering across North, South, East, and West zones.
+  * 📊 **COVID Impact Rankings:** Bar charts ranking states by magnitude of unemployment surge.
+
+---
+
+### 🛠 Tech Stack
+
+* **Data Science & ML:** `Python`, `pandas`, `numpy`, `scikit-learn`, `statsmodels`, `matplotlib`, `seaborn`, `plotly`
+* **Frontend / Dashboard:** `React.js`, `Recharts`, `Tailwind CSS`
+
+---
+
+### 🚀 How to Run Locally
+
+#### **1. Data Science Environment**
+```bash
+# Clone the repository
+git clone [https://github.com/your-username/CodeAlpha_UnemploymentAnalysis.git](https://github.com/your-username/CodeAlpha_UnemploymentAnalysis.git)
+cd CodeAlpha_UnemploymentAnalysis
+
+# Set up virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies and launch Jupyter
+pip install -r requirements.txt
+jupyter lab
